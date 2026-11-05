@@ -9,6 +9,7 @@ packaging==26.3
 pillow==13.0.0
 psycopg==3.3.8
 psycopg-binary==3.3.8
+python-decouple==3.8
 python-dotenv==1.2.4
 setuptools==83.0.0
 smmap==5.0.3
