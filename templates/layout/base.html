@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <title>PersonalFinance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}Personal Finance{% endblock %}</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/htmx.org@2.0.7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
+
 <body>
 
-{% block content %}
-{% endblock %}
+{% include "layout/sidebar.html" %}
+
+<div class="main-content">
+
+    {% include "layout/navbar.html" %}
+
+    <main class="container-fluid py-4">
+
+        {% block content %}
+        {% endblock %}
+
+    </main>
+
+</div>
 
 </body>
 </html>
